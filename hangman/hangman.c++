@@ -91,9 +91,9 @@ void playGame(string setter, string guesser)
     Hangman(wrong);
 
     if (guess == word)
-        cout << "\n let's goo" << guesser << " WON! Word was: " << word << endl;
+        cout << "\n let's goo " << guesser << " WON! Word was: " << word << endl;
     else
-        cout << "\n damnn" << guesser << " LOST! Word was: " << word << endl;
+        cout << "\n damnn " << guesser << " LOST! Word was: " << word << endl;
 }
 
 int main()
