@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int size, target, found = 0;
+    char userChoice;
+    do
+    {
+        cout << "Enter the size of the array (positive integer): ";
+        cin >> size;
+        while (size <= 0)
+        {
+            cout << "Array size must be a positive integer. Please enter again: ";
+            cin >> size;
+        }
+        int array[size];
+        cout << "Enter " << size << " integers for the array: " << endl;
+        for (int i = 0; i < size; i++)
+        {
+            cout << "Element " << i + 1 << ": ";
+            cin >> array[i];
+        }
+        cout << "Enter the integer to search in the array: ";
+        cin >> target;
+        found = 0;
+        for (int i = 0; i < size; i++)
+        {
+            if (array[i] == target)
+            {
+                cout << "The integer " << target << " is found at position " << i + 1 << " (index " << i << ")." << endl;
+                found = 1;
+                break;
+            }
+        }
+        if (!found)
+        {
+            cout << "The integer " << target << " is not present in the array." << endl;
+        }
+        cout << "Do you want to search in another array? (y/n): ";
+        cin >> userChoice;
+    } while (userChoice == 'y' || userChoice == 'Y');
+    cout << "Program exited. Thank you!" << endl;
+    return 0;
+}

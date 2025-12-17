@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char inputChar;
+    char userChoice;
+    do {
+        cout << "Enter a character: ";
+        cin >> inputChar;
+        if ((inputChar >= 'A' && inputChar <= 'Z') || (inputChar >= 'a' && inputChar <= 'z')) {
+            cout << "The character '" << inputChar << "' is an alphabet." << endl;
+        } else if (inputChar >= '0' && inputChar <= '9') {
+            cout << "The character '" << inputChar << "' is a digit." << endl;
+        } else {
+            cout << "The character '" << inputChar << "' is a special character." << endl;
+        }
+        cout << "Do you want to check another character? (y/n): ";
+        cin >> userChoice;
+    } while (userChoice == 'y' || userChoice == 'Y');
+    return 0;
+}

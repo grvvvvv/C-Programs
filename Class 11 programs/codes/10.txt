@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num_students = 4;
+    int num_tests = 3;
+    float scores[num_students][num_tests];
+    float total, average;
+    for (int i = 0; i < num_students; i++)
+    {
+        total = 0;
+        cout << "\nEnter scores for Student " << i + 1 << ":\n";
+        for (int j = 0; j < num_tests; j++)
+        {
+            cout << "Enter score for Test " << j + 1 << ": ";
+            cin >> scores[i][j];
+            total += scores[i][j];
+        }
+        average = total / num_tests;
+        cout << "Student " << i + 1 << " - Total: " << total << ", Average: " << average << ", Grade: ";
+        if (average >= 90)
+        {
+            cout << "A\n";
+        }
+        else if (average >= 80)
+        {
+            cout << "B\n";
+        }
+        else if (average >= 70)
+        {
+            cout << "C\n";
+        }
+        else if (average >= 60)
+        {
+            cout << "D\n";
+        }
+        else
+        {
+            cout << "F\n";
+        }
+    }
+    return 0;
+}
