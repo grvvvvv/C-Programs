@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string originalString, reversedString = "";
+    cout << "Enter a string: ";
+    cin >> originalString;
+    int stringLength = originalString.length();
+    for (int index = stringLength - 1; index >= 0; index--)
+    {
+        reversedString += originalString[index];
+    }
+    cout << "Reversed string: " << reversedString << endl;
+    return 0;
+}

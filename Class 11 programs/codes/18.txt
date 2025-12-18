@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct Student
+{
+    string name;
+    int rollNo;
+    float marks[5];
+    float totalMarks;
+    float percentage;
+};
+void calculateResult(Student &student)
+{
+    student.totalMarks = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        student.totalMarks += student.marks[i];
+    }
+    student.percentage = (student.totalMarks / 500) * 100;
+}
+int main()
+{
+    Student student;
+    cout << "Enter student name: ";
+    getline(cin, student.name);
+    cout << "Enter student roll number: ";
+    cin >> student.rollNo;
+    cout << "Enter marks for 5 subjects:\n";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << "Subject " << i + 1 << " marks: ";
+        cin >> student.marks[i];
+    }
+    calculateResult(student);
+    cout << "\nStudent Result:\n";
+    cout << "Name: " << student.name << endl;
+    cout << "Roll No: " << student.rollNo << endl;
+    cout << "Marks: ";
+    for (int i = 0; i < 5; i++)
+    {
+        cout << student.marks[i] << " ";
+    }
+    cout << endl;
+    cout << "Total Marks: " << student.totalMarks << endl;
+    cout << "Percentage: " << student.percentage << "%" << endl;
+    return 0;
+}

@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct Student
+{
+    string name;
+    int age;
+    float marks[3];
+};
+struct Class
+{
+    string className;
+    Student students[3];
+};
+int main()
+{
+    Class classData;
+    cout << "Enter the class name: ";
+    getline(cin, classData.className);
+    for (int i = 0; i < 2; i++)
+    {
+        cout << "\nEnter details for Student " << i + 1 << ":\n";
+        cout << "Name: ";
+        getline(cin, classData.students[i].name);
+        cout << "Age: ";
+        cin >> classData.students[i].age;
+        for (int j = 0; j < 3; j++)
+        {
+            cout << "Marks for subject " << j + 1 << ": ";
+            cin >> classData.students[i].marks[j];
+        }
+        cin.ignore();
+    }
+    cout << "\nClass Name: " << classData.className << endl;
+    for (int i = 0; i < 2; i++)
+    {
+        cout << "\nStudent " << i + 1 << " Details:\n";
+        cout << "Name: " << classData.students[i].name << endl;
+        cout << "Age: " << classData.students[i].age << endl;
+        cout << "Marks: ";
+        for (int j = 0; j < 3; j++)
+        {
+            cout << classData.students[i].marks[j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}

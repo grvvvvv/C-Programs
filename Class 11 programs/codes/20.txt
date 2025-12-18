@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct Student
+{
+    string name;
+    int age;
+    float marks;
+};
+void modifyStudentDetails(Student &student)
+{
+    cout << "\nInside the function (After passing by reference):\n";
+    cout << "Name: " << student.name << endl;
+    cout << "Age: " << student.age << endl;
+    cout << "Marks: " << student.marks << endl;
+    student.marks += 10;
+    cout << "\nModified Marks Inside Function: " << student.marks << endl;
+}
+int main()
+{
+    Student student1;
+    cout << "Enter student name: ";
+    getline(cin, student1.name);
+    cout << "Enter student age: ";
+    cin >> student1.age;
+    cout << "Enter student marks: ";
+    cin >> student1.marks;
+    cout << "\nBefore passing to function (By reference):\n";
+    cout << "Name: " << student1.name << endl;
+    cout << "Age: " << student1.age << endl;
+    cout << "Marks: " << student1.marks << endl;
+    modifyStudentDetails(student1);
+    cout << "\nAfter returning from function (Original structure is modified):\n";
+    cout << "Name: " << student1.name << endl;
+    cout << "Age: " << student1.age << endl;
+    cout << "Marks: " << student1.marks << endl;
+    return 0;
+}

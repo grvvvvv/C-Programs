@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct Employee
+{
+    int employeeNumber;
+    string employeeName, employeeDepartment;
+    float employeeSalary;
+};
+void inputEmployeeDetails(Employee employeeList[], int totalEmployees)
+{
+    for (int index = 0; index < totalEmployees; index++)
+    {
+        cout << "\nEnter details for Employee " << index + 1 << ":\n";
+        cout << "Employee Number: ";
+        cin >> employeeList[index].employeeNumber;
+        cin.ignore();
+        cout << "Name: ";
+        getline(cin, employeeList[index].employeeName);
+        cout << "Department: ";
+        getline(cin, employeeList[index].employeeDepartment);
+        cout << "Salary: ";
+        cin >> employeeList[index].employeeSalary;
+    }
+}
+void displayEmployeeDetails(const Employee &employee)
+{
+    cout << "\n===== Employee Details =====\n";
+    cout << "Employee Number : " << employee.employeeNumber << endl;
+    cout << "Name : " << employee.employeeName << endl;
+    cout << "Department : " << employee.employeeDepartment << endl;
+    cout << "Salary : " << employee.employeeSalary << endl;
+    cout << "=============================\n";
+}
+void searchEmployeeByNumber(Employee employeeList[], int totalEmployees, int searchEmployeeNumber)
+{
+    for (int index = 0; index < totalEmployees; index++)
+    {
+        if (employeeList[index].employeeNumber == searchEmployeeNumber)
+        {
+            displayEmployeeDetails(employeeList[index]);
+            return;
+        }
+    }
+    cout << "Employee with Employee Number " << searchEmployeeNumber << " not found.\n";
+}
+int main()
+{
+    const int TOTAL_EMPLOYEES = 10;
+    Employee employeeList[TOTAL_EMPLOYEES];
+    cout << "===== Employee Information System =====\n";
+    inputEmployeeDetails(employeeList, TOTAL_EMPLOYEES);
+    char userChoice;
+    do
+    {
+        int searchEmployeeNumber;
+        cout << "\nEnter Employee Number to search: ";
+        cin >> searchEmployeeNumber;
+        searchEmployeeByNumber(employeeList, TOTAL_EMPLOYEES, searchEmployeeNumber);
+        cout << "\nDo you want to search for another employee? (y/n): ";
+        cin >> userChoice;
+    } while (userChoice == 'y' || userChoice == 'Y');
+    cout << "\nThank you for using the Employee Information System. Goodbye!\n";
+    return 0;
+}
