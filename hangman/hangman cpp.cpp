@@ -101,10 +101,10 @@ int main()
     string player2;
 
     cout << "Enter Player 1 name: ";
-    cin >> player1;
+    getline(cin, player1);
 
     cout << "Enter Player 2 name: ";
-    cin >> player2;
+    getline(cin, player2);
 
     cout << "\n--- ROUND 1 ---\n";
     playGame(player1, player2);
