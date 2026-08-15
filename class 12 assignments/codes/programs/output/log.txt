@@ -1,0 +1,3 @@
+Added record with ID: 101
+Added record with ID: 102
+Updated ID 101 with new marks: 95.000000
