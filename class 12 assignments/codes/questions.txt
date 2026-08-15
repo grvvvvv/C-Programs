@@ -1,0 +1,66 @@
+Program 1: Program to hold details of 5 students and provide the facility of viewing details of the topper as well as of specific student by providing his/her roll number.
+
+
+Program 2: Program to hold details of 5 students and provide the facility of viewing details of the topper as well as of specific student by providing his/her roll number.
+
+
+Program 3: Program to illustrate the use of object arrays by storing details of 5 items in an array of objects.
+
+
+Program 4: Program to illustrate the working of a function returning an object.
+
+
+Program 5: Program to illustrate the Call By Reference mechanism on objects.
+
+
+Program 6: Program to Sort elements of an array.
+
+
+Program 7: Program demonstrating Linear searching.
+
+
+Program 8: Program demonstrating Binary search.
+
+
+Program 9: Program for Inserting elements into the array.
+
+
+Program 10: Program for Deleting elements on the array.
+
+
+Program 11: Write a C++ program that inputs a line of text and a substring to search for. Then it should display the position of the first and last occurrence of the word.
+
+
+Program 12: Program to illustrate summation of Matrices.
+
+
+Program 13: Write a C++ program to find the Longest consecutive sequence of integers with no primes. The program should accept a number N and print out the Largest block of integers between 2 and N with no primes.
+
+
+Program 14: Write a function in C++ to count the words "this" and "these" present in a text file "ARTICLE.TXT".
+
+
+Program 15: Write a C++ program that displays the size of a file in bytes.
+
+
+Program 16: Program for Insertion at the beginning of a List.
+
+
+Program 17: Program for Insertion at the end of a List.
+
+
+Program 18: Write a C++ program to declare a pointer to an integer, assign a value to it, and print the value using the pointer.
+
+
+Program 19: Write a C++ program that demonstrates polymorphism. Create a base class Shape with a function area(). Derive a class Circle and override the area() function to calculate the area of a circle.
+
+
+Program 20: Write a C++ program with a class Book that uses a constructor to initialize title and author, and a destructor that prints a message when an object is destroyed.
+
+
+Program 21: Write a C++ program to create a binary file for records (ID, Name, Marks), a text file for logs, update records in the binary file, append data to the text file, and query records by ID with proper error handling using fstream.
+
+
+Program 22: Write a menu-driven C++ program to implement stack operations (push, pop, peek, and display) using a linear stack with arrays, a circular stack with arrays, and a stack with a linked list.
+
+
