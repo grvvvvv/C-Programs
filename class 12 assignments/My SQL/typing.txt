@@ -1,0 +1,64 @@
+1. Creating a Table
+Usage:
+This command is used to create a table named Employees with columns ID, Name, Role, Salary, Joining_Date, and Company. Each column is defined with its data type and constraints.
+
+2. Insert Records
+Usage:
+This command inserts new records into the Employees table with specific values for each column.
+
+3. Select All Records
+This command retrieves all rows and columns from the Employees table, displaying the complete dataset.
+
+4. Select Specific Columns
+This command retrieves only the Name and Role columns from all employees, ignoring the rest of the data.
+
+5. Filter by Salary
+This command retrieves records of employees whose salaries are greater than 50,000.
+
+6. Update a Record
+This command updates the salary of the employee with ID = 2 to 60,000.
+
+7. Delete a Record
+This command deletes the record of the employee with ID = 4.
+
+8. Count Total Records
+This command counts the total number of rows (records) in the Employees table.
+
+9. Sort Records
+This command sorts the rows of the Employees table in descending order based on the Salary column.
+
+10. Find Maximum Salary
+This command retrieves the maximum salary value from the Employees table.
+
+11. Group by Role
+This command groups the data by the Role column and counts the number of employees in each role.
+
+12. Drop the Table
+This command deletes the Employees table and all its data permanently from the database.
+
+13. Add a New Column
+This command adds a new column Email to the Employees table.
+
+14. Update Email Addresses
+This command generates email addresses for employees by combining their names and the company domain.
+
+15. Select Records with Email Column
+This command retrieves the ID, Name, and Email columns from the Employees table.
+
+16. Filter by Joining Date
+This command retrieves records of employees who joined after September 1, 2024.
+
+17. Rename Column
+This command renames the column Email to Contact_Email in the Employees table.
+
+18. Add a New Employee
+This command inserts a new employee record into the Employees table.
+
+19. Show Updated Table
+This command displays all records from the updated Employees table, including the newly added employee.
+
+20. Create a View
+This command creates a view named HighEarners to display employees whose salary is greater than 50,000.
+
+21. Display View Data
+This command retrieves all records from the HighEarners view.
